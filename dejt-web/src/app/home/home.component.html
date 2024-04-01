@@ -1,0 +1,57 @@
+<div class="container">
+    <div #1 *ngIf="checker === 0">
+        <h1>Dejt?</h1>
+    </div>
+
+    <div #2 *ngIf="checker === 1">
+        <h1>Myckeeet Fiint</h1>
+        <img class="img-styler" src="/assets/happy.jpg" alt="happy"/>
+        <!-- <p style="font-size:100px; padding: 30px;">😎</p> -->
+    </div>
+
+    <div #3 *ngIf="checker === 2">
+        <h1>Vad vill vi göra på dejten?</h1>
+
+        <div>
+            <mat-grid-list cols="3" rowHeight="200px">
+                <mat-grid-tile><img class="img-styler" src="/assets/date-night.jpg" alt="happy"/></mat-grid-tile>
+                <mat-grid-tile><img class="img-styler" src="/assets/bio.jpg" alt="happy"/></mat-grid-tile>
+                <mat-grid-tile><img class="img-styler" src="/assets/stan23.jpg" alt="happy"/></mat-grid-tile>
+                <mat-grid-tile><img class="img-styler" src="/assets/museum-date.jpg" alt="happy"/></mat-grid-tile>
+                <mat-grid-tile><img class="img-styler" src="/assets/happy.jpg" alt="happy"/></mat-grid-tile>
+                <mat-grid-tile><img class="img-styler" src="/assets/Accessbild.jpg" alt="happy"/></mat-grid-tile>
+            </mat-grid-list>
+        </div>
+        
+
+        <div style="background-color: grey; margin-bottom: 2rem;">
+            <mat-radio-group aria-label="Select an option" color="primary" (change)="setDateIdeeValue($event)">
+                <mat-radio-button [value]="1" color="primary">Middag</mat-radio-button>
+                <mat-radio-button [value]="2">Bio</mat-radio-button>
+                <mat-radio-button [value]="3">Utforska Stockholm</mat-radio-button>
+                <mat-radio-button [value]="4">Museum</mat-radio-button>
+                <mat-radio-button [value]="5">Kronofogden safari</mat-radio-button>
+                <mat-radio-button [value]="6">Mall of scandinavia</mat-radio-button>
+                <mat-radio-button [value]="7">Annat</mat-radio-button>
+              </mat-radio-group>
+        </div>
+    </div>
+
+    <div *ngIf="checker === 0" class="row">
+        <div class="col">
+            <button (click)="onYesClick()" class="button-styler" mat-flat-button color="primary">Ja</button>
+        </div>
+        <div class="col">
+            <button (click)="onNoClick()" class="button-styler" mat-flat-button color="accent">Nej</button>
+        </div>
+    </div>
+
+    <div *ngIf="checker > 0" class="row">
+        <div class="col">
+            <button (click)="onYesClick()" class="button-styler" mat-flat-button color="primary">Next</button>
+        </div>
+        <div class="col">
+            <button (click)="back()" class="button-styler" mat-flat-button color="accent">Back</button>
+        </div>
+    </div>
+</div>
