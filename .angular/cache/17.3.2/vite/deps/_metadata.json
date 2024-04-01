@@ -1,0 +1,88 @@
+{
+  "hash": "b64f77ba",
+  "configHash": "a0603f01",
+  "lockfileHash": "76b9856c",
+  "browserHash": "3ec500c2",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "892cd48c",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "2325e31b",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "8e86deba",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations/async": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
+      "file": "@angular_platform-browser_animations_async.js",
+      "fileHash": "63da7aa0",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "dcf6ef74",
+      "needsInterop": false
+    },
+    "@angular/material/button": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/button.mjs",
+      "file": "@angular_material_button.js",
+      "fileHash": "9fad625e",
+      "needsInterop": false
+    },
+    "@angular/material/snack-bar": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/snack-bar.mjs",
+      "file": "@angular_material_snack-bar.js",
+      "fileHash": "61025597",
+      "needsInterop": false
+    },
+    "@angular/material/grid-list": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/grid-list.mjs",
+      "file": "@angular_material_grid-list.js",
+      "fileHash": "80ad1419",
+      "needsInterop": false
+    },
+    "@angular/material/radio": {
+      "src": "../../../../../node_modules/@angular/material/fesm2022/radio.mjs",
+      "file": "@angular_material_radio.js",
+      "fileHash": "fa426cf0",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "browser-3ZTTZZD2": {
+      "file": "browser-3ZTTZZD2.js"
+    },
+    "chunk-SW43KUK2": {
+      "file": "chunk-SW43KUK2.js"
+    },
+    "chunk-5VBKMHIR": {
+      "file": "chunk-5VBKMHIR.js"
+    },
+    "chunk-IIGLPJ7O": {
+      "file": "chunk-IIGLPJ7O.js"
+    },
+    "chunk-GUGAWLYD": {
+      "file": "chunk-GUGAWLYD.js"
+    },
+    "chunk-6IC5EH45": {
+      "file": "chunk-6IC5EH45.js"
+    },
+    "chunk-2GHFRDYQ": {
+      "file": "chunk-2GHFRDYQ.js"
+    },
+    "chunk-RQJYVURK": {
+      "file": "chunk-RQJYVURK.js"
+    }
+  }
+}
