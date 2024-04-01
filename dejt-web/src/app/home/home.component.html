@@ -99,14 +99,12 @@
   <div #5 *ngIf="checker === 4">
     <form action="https://formspree.io/f/mzbnjygr" method="POST">
       <input type="email" name="email" />
-      <textarea name="message">
-        <label>
-            Dejt: <strong>{{ dateID }} </strong></label
-          ><br />
-          <label>
-            Mat: <strong>{{ foodID }} </strong></label
-          ><br />
-      </textarea>
+      <label name="message">
+        Dejt: <strong>{{ dateID }} </strong></label
+      ><br />
+      <label name="message">
+        Mat: <strong>{{ foodID }} </strong></label
+      ><br />
       <!-- your other form fields go here -->
       <button type="submit">Send</button>
     </form>
