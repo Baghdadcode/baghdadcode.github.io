@@ -1,57 +1,166 @@
 <div class="container">
-    <div #1 *ngIf="checker === 0">
-        <h1>Dejt?</h1>
+  <div #1 *ngIf="checker === 0">
+    <h1>Dejt på lördag?</h1>
+  </div>
+
+  <div #2 *ngIf="checker === 1">
+    <h1>Mycket Fint!</h1>
+    <img class="img-styler" src="/assets/happy.jpg" alt="happy" />
+    <!-- <p style="font-size:100px; padding: 30px;">😎</p> -->
+  </div>
+
+  <div #3 *ngIf="checker === 2">
+    <h1>Vad vill vi göra på dejten?</h1>
+
+    <div>
+      <mat-grid-list cols="3" rowHeight="200px">
+        <mat-grid-tile
+          ><img class="img-styler" src="/assets/date-night.jpg" alt="happy"
+        /></mat-grid-tile>
+        <mat-grid-tile
+          ><img class="img-styler" src="/assets/bio.jpg" alt="happy"
+        /></mat-grid-tile>
+        <mat-grid-tile
+          ><img class="img-styler" src="/assets/stan23.jpg" alt="happy"
+        /></mat-grid-tile>
+        <mat-grid-tile
+          ><img class="img-styler" src="/assets/museum-date.jpg" alt="happy"
+        /></mat-grid-tile>
+        <mat-grid-tile
+          ><img class="img-styler" src="/assets/tensta.jpg" alt="happy"
+        /></mat-grid-tile>
+        <mat-grid-tile
+          ><img class="img-styler" src="/assets/Accessbild.jpg" alt="happy"
+        /></mat-grid-tile>
+      </mat-grid-list>
     </div>
 
-    <div #2 *ngIf="checker === 1">
-        <h1>Myckeeet Fiint</h1>
-        <img class="img-styler" src="/assets/happy.jpg" alt="happy"/>
-        <!-- <p style="font-size:100px; padding: 30px;">😎</p> -->
+    <div style="background-color: grey; margin-bottom: 2rem">
+      <mat-radio-group
+        aria-label="Select an option"
+        color="primary"
+        (change)="setDateIdeeValue($event)"
+      >
+        <mat-radio-button [value]="'Mysig Middag'" color="primary"
+          >Middag</mat-radio-button
+        >
+        <mat-radio-button [value]="'Bio Dejt'">Bio</mat-radio-button>
+        <mat-radio-button [value]="'Utforska Stockholm'"
+          >Utforska Stockholm</mat-radio-button
+        >
+        <mat-radio-button [value]="'Museum Dejt'">Museum</mat-radio-button>
+        <mat-radio-button [value]="'Kronofogden Safari'"
+          >Kronofogden safari</mat-radio-button
+        >
+        <mat-radio-button [value]="'MOS Dejt'"
+          >Mall of scandinavia</mat-radio-button
+        >
+        <mat-radio-button [value]="'Annat'">Annat</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div #4 *ngIf="checker === 3">
+    <h1>Vad för mat är du sugen på?</h1>
+
+    <div>
+      <mat-grid-list cols="3" rowHeight="200px">
+        <mat-grid-tile><p style="font-size: 100px">🍔</p></mat-grid-tile>
+        <mat-grid-tile><p style="font-size: 100px">🌮</p></mat-grid-tile>
+        <mat-grid-tile><p style="font-size: 100px">🥞</p></mat-grid-tile>
+        <mat-grid-tile><p style="font-size: 100px">🍜</p></mat-grid-tile>
+        <mat-grid-tile><p style="font-size: 100px">🍕</p></mat-grid-tile>
+        <mat-grid-tile><p style="font-size: 100px">🍝</p></mat-grid-tile>
+      </mat-grid-list>
     </div>
 
-    <div #3 *ngIf="checker === 2">
-        <h1>Vad vill vi göra på dejten?</h1>
-
-        <div>
-            <mat-grid-list cols="3" rowHeight="200px">
-                <mat-grid-tile><img class="img-styler" src="/assets/date-night.jpg" alt="happy"/></mat-grid-tile>
-                <mat-grid-tile><img class="img-styler" src="/assets/bio.jpg" alt="happy"/></mat-grid-tile>
-                <mat-grid-tile><img class="img-styler" src="/assets/stan23.jpg" alt="happy"/></mat-grid-tile>
-                <mat-grid-tile><img class="img-styler" src="/assets/museum-date.jpg" alt="happy"/></mat-grid-tile>
-                <mat-grid-tile><img class="img-styler" src="/assets/happy.jpg" alt="happy"/></mat-grid-tile>
-                <mat-grid-tile><img class="img-styler" src="/assets/Accessbild.jpg" alt="happy"/></mat-grid-tile>
-            </mat-grid-list>
-        </div>
-        
-
-        <div style="background-color: grey; margin-bottom: 2rem;">
-            <mat-radio-group aria-label="Select an option" color="primary" (change)="setDateIdeeValue($event)">
-                <mat-radio-button [value]="1" color="primary">Middag</mat-radio-button>
-                <mat-radio-button [value]="2">Bio</mat-radio-button>
-                <mat-radio-button [value]="3">Utforska Stockholm</mat-radio-button>
-                <mat-radio-button [value]="4">Museum</mat-radio-button>
-                <mat-radio-button [value]="5">Kronofogden safari</mat-radio-button>
-                <mat-radio-button [value]="6">Mall of scandinavia</mat-radio-button>
-                <mat-radio-button [value]="7">Annat</mat-radio-button>
-              </mat-radio-group>
-        </div>
+    <div style="background-color: grey; margin-bottom: 2rem">
+      <mat-radio-group
+        aria-label="Select an option"
+        color="primary"
+        (change)="setFoodValue($event)"
+      >
+        <mat-radio-button [value]="'Mexicansk'">Mexicansk</mat-radio-button>
+        <mat-radio-button [value]="'Persiskt'">Persiskt</mat-radio-button>
+        <mat-radio-button [value]="'Hamburgare'">Hamburgare</mat-radio-button>
+        <mat-radio-button [value]="'Indiskt'">Indiskt</mat-radio-button>
+        <mat-radio-button [value]="'Asiatiskt'">Asiatiskt</mat-radio-button>
+        <mat-radio-button [value]="'Turkiskt'">Turkiskt</mat-radio-button>
+        <mat-radio-button [value]="'SvenneBanan'">Svenne?</mat-radio-button>
+        <mat-radio-button [value]="'Italienskt'">Italienskt</mat-radio-button>
+        <mat-radio-button [value]="'Coola Mohandes bestämmer'"
+          >Mohandes bestämmer</mat-radio-button
+        >
+        <mat-radio-button [value]="'Annat'">Annat</mat-radio-button>
+      </mat-radio-group>
     </div>
+  </div>
 
-    <div *ngIf="checker === 0" class="row">
-        <div class="col">
-            <button (click)="onYesClick()" class="button-styler" mat-flat-button color="primary">Ja</button>
-        </div>
-        <div class="col">
-            <button (click)="onNoClick()" class="button-styler" mat-flat-button color="accent">Nej</button>
-        </div>
-    </div>
+  <div #5 *ngIf="checker === 4">
+    <form action="https://formspree.io/f/mzbnjygr" method="POST">
+      <input type="email" name="email" value="bam1891dad@gmail.com" hidden />
+      <textarea name="message">
+        <label>
+            Dejt: <strong>{{ dateID }} </strong></label
+          ><br />
+          <label>
+            Mat: <strong>{{ foodID }} </strong></label
+          ><br />
+      </textarea>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+  </div>
 
-    <div *ngIf="checker > 0" class="row">
-        <div class="col">
-            <button (click)="onYesClick()" class="button-styler" mat-flat-button color="primary">Next</button>
-        </div>
-        <div class="col">
-            <button (click)="back()" class="button-styler" mat-flat-button color="accent">Back</button>
-        </div>
+  <div #6 *ngIf="checker === 5">
+    <h1>Super! Vi ses då!</h1>
+    <img class="img-styler" src="/assets/happy2.jpg" alt="happy" />
+  </div>
+
+  <div *ngIf="checker === 0" class="row">
+    <div class="col">
+      <button
+        (click)="onYesClick()"
+        class="button-styler"
+        mat-flat-button
+        color="primary"
+      >
+        Ja
+      </button>
     </div>
+    <div class="col">
+      <button
+        (click)="onNoClick()"
+        class="button-styler"
+        mat-flat-button
+        color="accent"
+      >
+        Nej
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="checker > 0 && checker !== 4" class="row">
+    <div class="col">
+      <button
+        [disabled]="isSelected"
+        (click)="onYesClick()"
+        class="button-styler"
+        mat-flat-button
+        color="primary"
+      >
+        Next
+      </button>
+    </div>
+    <div class="col">
+      <button
+        (click)="back()"
+        class="button-styler"
+        mat-flat-button
+        color="accent"
+      >
+        Back
+      </button>
+    </div>
+  </div>
 </div>

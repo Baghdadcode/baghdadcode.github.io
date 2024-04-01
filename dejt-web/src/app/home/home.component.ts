@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class HomeComponent {
   checker = 0;
   dateID: string = '';
+  foodID: string = '';
 
   constructor(private _snackBar: MatSnackBar) {}
 
@@ -30,6 +31,28 @@ export class HomeComponent {
 
   setDateIdeeValue(event: any) {
     this.dateID = event.value;
-    console.log(this.dateID);
+  }
+
+  setFoodValue(event: any) {
+    this.foodID = event.value;
+  }
+
+  get isSelected() {
+    if (this.checker == 2) {
+      if (this.dateID !== '') {
+        return false;
+      } else {
+        return true;
+      }
+    }
+    if (this.checker == 3) {
+      if (this.foodID !== '') {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
   }
 }
