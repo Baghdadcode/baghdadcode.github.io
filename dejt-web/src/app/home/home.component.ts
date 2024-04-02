@@ -1,3 +1,4 @@
+import { HttpClient, withFetch } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, NgModule } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -10,14 +11,19 @@ export class HomeComponent {
   checker = 0;
   dateID: string = '';
   foodID: string = '';
+  message: string = '';
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor(private _snackBar: MatSnackBar, private http: HttpClient) {}
 
   onNoClick() {
     this._snackBar.open('💔💔💔💔💔💔💔💔💔', 'X');
   }
 
   onYesClick() {
+    if (this.checker == 3) {
+      console.log('hello');
+      this.message = this.dateID + ' : ' + this.foodID;
+    }
     this.checker += 1;
   }
 

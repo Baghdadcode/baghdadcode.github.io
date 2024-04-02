@@ -19,6 +19,11 @@ import {
   MatSnackBarLabel,
   MatSnackBarRef,
 } from '@angular/material/snack-bar';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withFetch,
+} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
@@ -32,8 +37,13 @@ import {
     MatSnackBarLabel,
     MatGridListModule,
     MatRadioModule,
+    HttpClientModule,
   ],
-  providers: [provideClientHydration(), provideAnimationsAsync()],
+  providers: [
+    provideClientHydration(),
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch()),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
